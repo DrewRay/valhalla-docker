@@ -2,7 +2,7 @@ FROM ubuntu:trusty
 MAINTAINER Andrew Ray (Andrew.ray@optum.com)
 
 
-
+USER Root
 ENV TERM xterm
 RUN apt-get update && apt-get upgrade -y && \
   apt-get install -y git \
@@ -29,13 +29,18 @@ RUN git clone --depth=1 --recurse-submodules --single-branch --branch=master htt
   ./scripts/install.sh && \
   cd ..
 
-ADD ./conf /conf
+#ADD ./conf /conf
+git clone \
+    --depth=1 \
+    --recurse-submodules \
+    --single-branch \
+    --branch=master https://github.com/valhalla/conf.git
 
 RUN ldconfig
 
 #RUN wget --progress=dot:mega https://s3.amazonaws.com/metro-extracts.mapzen.com/minneapolis-saint-paul_minnesota.osm.pbf 
 #RUN wget --progress=dot:giga http://download.geofabrik.de/north-america-latest.osm.pbf
-run axel -a -n 8 -N http://planet.osm.org/pbf/planet-latest.osm.pbf
+run axel -a -n 8 -N http://planet.osm.org/pbf/planet-160620.osm.pbf
 
 
 
@@ -48,6 +53,6 @@ RUN apt-get clean && \
 
 USER daemon
 
-EXPOSE 8002
+EXPOSE 8002:8002
 CMD ["tools/valhalla_route_service", "conf/valhalla.json"]
 
