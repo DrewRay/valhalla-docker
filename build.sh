@@ -11,6 +11,6 @@ if [ ! -d "$DIRECTORY" ]; then
 fi
 
 docker build \
-  --tag wouldgo/valhalla \
+  --tag aray12/valhalla \
   --force-rm \
   .
