@@ -37,7 +37,7 @@ RUN ldconfig
 
 #RUN wget --progress=dot:mega https://s3.amazonaws.com/metro-extracts.mapzen.com/minneapolis-saint-paul_minnesota.osm.pbf 
 #RUN wget --progress=dot:giga http://download.geofabrik.de/north-america-latest.osm.pbf
-run axel -a -n 8 -N http://planet.osm.org/pbf/planet-160620.osm.pbf
+run axel -a -n 32 -N http://planet.osm.org/pbf/planet-160620.osm.pbf
 
 
 
