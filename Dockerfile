@@ -1,9 +1,6 @@
 FROM ubuntu:trusty
 MAINTAINER Andrew Ray (Andrew.ray@optum.com)
 
-
-USER Root
-ENV TERM xterm
 RUN apt-get update && apt-get upgrade -y && \
   apt-get install -y git \
   libtool \
