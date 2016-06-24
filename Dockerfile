@@ -18,13 +18,12 @@ RUN git clone --depth=1 --recurse-submodules --single-branch --branch=master htt
   cd mjolnir && \
   ./scripts/dependencies.sh && \
   ./scripts/install.sh && \
-  cd ..
-
-RUN git clone --depth=1 --recurse-submodules --single-branch --branch=master https://github.com/valhalla/tools.git && \
+  cd .. && \
+  git clone --depth=1 --recurse-submodules --single-branch --branch=master https://github.com/valhalla/tools.git && \
   cd tools && \
   ./scripts/dependencies.sh && \
   ./scripts/install.sh && \
-  cd ..
+  cd .. 
 
 #ADD ./conf /conf
 RUN git clone \
@@ -37,16 +36,15 @@ RUN ldconfig
 
 #RUN wget --progress=dot:mega https://s3.amazonaws.com/metro-extracts.mapzen.com/minneapolis-saint-paul_minnesota.osm.pbf 
 #RUN wget --progress=dot:giga http://download.geofabrik.de/north-america-latest.osm.pbf
-run axel -a -n 32 -N http://planet.osm.org/pbf/planet-160620.osm.pbf
 
+#RUN axel -a -n 32 -N http://planet.osm.org/pbf/planet-160620.osm.pbf | awk -W interactive '$0~/\[/{printf "%s'$'\r''", $0}'
+RUN axel -a -n 32 -N http://download.geofabrik.de/north-america-latest.osm.pbf | awk -W interactive '$0~/\[/{printf "%s'$'\r''", $0}'
 
 
 RUN mkdir -p /data/valhalla
 RUN valhalla_build_admins -c conf/valhalla.json *.pbf
 RUN valhalla_build_tiles -c conf/valhalla.json *.pbf
 
-RUN apt-get clean && \
-  rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 USER daemon
 
