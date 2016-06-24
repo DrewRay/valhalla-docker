@@ -38,12 +38,13 @@ RUN ldconfig
 #RUN wget --progress=dot:giga http://download.geofabrik.de/north-america-latest.osm.pbf
 
 #RUN axel -a -n 32 -N http://planet.osm.org/pbf/planet-160620.osm.pbf | awk -W interactive '$0~/\[/{printf "%s'$'\r''", $0}'
-RUN axel -a -n 32 -N http://download.geofabrik.de/north-america-latest.osm.pbf | awk -W interactive '$0~/\[/{printf "%s'$'\r''", $0}'
+#RUN axel -a -n 32 -N http://download.geofabrik.de/north-america-latest.osm.pbf | awk -W interactive '$0~/\[/{printf "%s'$'\r''", $0}'
 
 
-RUN mkdir -p /data/valhalla
-RUN valhalla_build_admins -c conf/valhalla.json *.pbf
-RUN valhalla_build_tiles -c conf/valhalla.json *.pbf
+#RUN mkdir -p /data/valhalla
+
+#RUN valhalla_build_admins -c conf/valhalla.json *.pbf
+#RUN valhalla_build_tiles -c conf/valhalla.json *.pbf
 
 
 USER daemon
