@@ -27,7 +27,7 @@ RUN git clone --depth=1 --recurse-submodules --single-branch --branch=master htt
   cd ..
 
 #ADD ./conf /conf
-git clone \
+RUN git clone \
     --depth=1 \
     --recurse-submodules \
     --single-branch \
