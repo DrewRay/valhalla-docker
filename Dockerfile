@@ -50,6 +50,6 @@ RUN apt-get clean && \
 
 USER daemon
 
-EXPOSE 8002:8002
+EXPOSE 8002
 CMD ["tools/valhalla_route_service", "conf/valhalla.json"]
 
