@@ -1,9 +1,9 @@
-FROM aray12/valhalla-docker
+FROM aray12/valhalla-docker:Base
 MAINTAINER Andrew Ray (Andrew.ray@optum.com)
 
 
-#RUN axel -a -n 32 -N http://planet.osm.org/pbf/planet-160620.osm.pbf | awk -W interactive '$0~/\[/{printf "%s'$'\r''", $0}'
-RUN axel -a -n 32 -N http://download.geofabrik.de/north-america-latest.osm.pbf | awk -W interactive '$0~/\[/{printf "%s'$'\r''", $0}'
+RUN axel -a -n 48 -N http://planet.osm.org/pbf/planet-160620.osm.pbf
+
 
 
 RUN mkdir -p /data/valhalla
