@@ -47,7 +47,6 @@ RUN ldconfig
 #RUN valhalla_build_tiles -c conf/valhalla.json *.pbf
 
 
-USER daemon
 
 EXPOSE 8002
 CMD ["tools/valhalla_route_service", "conf/valhalla.json"]
