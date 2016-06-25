@@ -4,7 +4,7 @@ MAINTAINER Andrew Ray (Andrew.ray@optum.com)
 
 #RUN axel -a -n 32 -N http://planet.osm.org/pbf/planet-160620.osm.pbf
 
-RUN axel -a -n 32 -N https://s3.amazonaws.com/metro-extracts.mapzen.com/minneapolis-saint-paul_minnesota.osm.pbf 
+RUN axel -a -n 32 -N https://s3.amazonaws.com/metro-extracts.mapzen.com/duluth_minnesota.osm.pbf
 
 
 
