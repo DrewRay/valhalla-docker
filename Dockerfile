@@ -2,7 +2,7 @@ FROM aray12/valhalla-docker:Base
 MAINTAINER Andrew Ray (Andrew.ray@optum.com)
 
 
-RUN axel -a -n 48 -N http://planet.osm.org/pbf/planet-160620.osm.pbf
+RUN axel -a -n 32 -N http://planet.osm.org/pbf/planet-160620.osm.pbf
 
 
 
