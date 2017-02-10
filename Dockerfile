@@ -12,7 +12,7 @@ RUN apt-get update && apt-get upgrade -y && \
   libboost1.54-all-dev \
   software-properties-common \
   axel
-  
+&& rm -rf /var/lib/apt/lists/*
 
 RUN git clone --depth=1 --recurse-submodules --single-branch --branch=master https://github.com/valhalla/mjolnir.git && \
   cd mjolnir && \
@@ -23,16 +23,13 @@ RUN git clone --depth=1 --recurse-submodules --single-branch --branch=master htt
   cd tools && \
   ./scripts/dependencies.sh && \
   ./scripts/install.sh && \
-  cd .. 
-
-#ADD ./conf /conf
-RUN git clone \
+  cd .. && \
+  git clone \
     --depth=1 \
     --recurse-submodules \
     --single-branch \
-    --branch=master https://github.com/valhalla/conf.git
-
-RUN ldconfig
+    --branch=master https://github.com/valhalla/conf.git && \
+  ldconfig
 
 
 # image incomplete, needs data and tiles built before publish, below items to be uncommented in builds derived from this base.
