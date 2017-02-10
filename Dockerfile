@@ -11,7 +11,7 @@ RUN apt-get update && apt-get upgrade -y && \
   build-essential \
   libboost1.54-all-dev \
   software-properties-common \
-  axel
+  axel \
 && rm -rf /var/lib/apt/lists/*
 
 RUN git clone --depth=1 --recurse-submodules --single-branch --branch=master https://github.com/valhalla/mjolnir.git && \
