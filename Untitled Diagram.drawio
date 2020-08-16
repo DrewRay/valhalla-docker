@@ -1,11 +1,11 @@
-<mxfile host="app.diagrams.net" modified="2020-08-16T02:38:50.223Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36 Edg/83.0.478.44" etag="uHBFcvaMSSdnPKzR3vaS" version="13.6.2" type="github">
+<mxfile host="app.diagrams.net" modified="2020-08-16T02:42:41.196Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36 Edg/83.0.478.44" etag="h1rVj1wf9PxevXOhtN86" version="13.6.2" type="github">
   <diagram id="6a731a19-8d31-9384-78a2-239565b7b9f0" name="Page-1">
     <mxGraphModel dx="1019" dy="16" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="#ffffff" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="57" value="Lane 1" style="strokeColor=#BAC8D3;fillColor=#23445D;fontSize=24;strokeWidth=2;horizontal=0;fontFamily=Helvetica;html=1;fontColor=#FFFFFF;fontStyle=0" parent="1" vertex="1">
-          <mxGeometry x="154" y="930.5" width="50" height="300" as="geometry" />
+        <mxCell id="56" value="Project&#xa;" style="strokeColor=#BAC8D3;fillColor=#23445D;fontSize=24;strokeWidth=2;fontFamily=Helvetica;html=1;fontColor=#FFFFFF;fontStyle=0;spacingBottom=8;spacingRight=0;spacingLeft=83;" parent="1" vertex="1">
+          <mxGeometry x="154" y="850.5" width="2030" height="80" as="geometry" />
         </mxCell>
         <mxCell id="58" value="Lane 1.1" style="strokeColor=#BAC8D3;fillColor=#5d7f99;fontSize=19;strokeWidth=2;horizontal=0;fontFamily=Helvetica;html=1;labelBackgroundColor=none;fontColor=#FFFFFF;" parent="1" vertex="1">
           <mxGeometry x="204" y="930.5" width="40" height="99.5" as="geometry" />
@@ -362,18 +362,6 @@
               <mxPoint x="1524.1360544217687" y="1280.5" />
             </Array>
           </mxGeometry>
-        </mxCell>
-        <mxCell id="140" value="" style="group" parent="1" vertex="1" connectable="0">
-          <mxGeometry x="244" y="890.5" width="646.6666666666666" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="141" value="Milestone 1" style="strokeColor=#BAC8D3;fillColor=#5d7f99;fontSize=19;strokeWidth=2;fontFamily=Helvetica;html=1;labelBackgroundColor=none;fontColor=#FFFFFF;" parent="140" vertex="1">
-          <mxGeometry width="646.6656362699642" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="142" value="Milestone 2" style="strokeColor=#BAC8D3;fillColor=#5d7f99;fontSize=19;strokeWidth=2;fontFamily=Helvetica;html=1;labelBackgroundColor=none;fontColor=#FFFFFF;" parent="140" vertex="1">
-          <mxGeometry x="646.6656362699642" width="646.6656362699642" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="143" value="Milestone 3" style="strokeColor=#BAC8D3;fillColor=#5d7f99;fontSize=19;strokeWidth=2;fontFamily=Helvetica;html=1;labelBackgroundColor=none;fontColor=#FFFFFF;" parent="140" vertex="1">
-          <mxGeometry x="1293.3312725399282" width="646.6666666666666" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
